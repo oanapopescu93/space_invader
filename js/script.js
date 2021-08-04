@@ -185,7 +185,7 @@ function canvas_game(canvas_id){
 			var collision = self.test_collision_entities(player, enemyList[i]);
 			if(collision){	
 				collision_width_enemy = true;
-				console.warn('collision_width_enemy', collision_width_enemy);	
+				//console.warn('collision_width_enemy', collision_width_enemy);	
 			} 
 		}
 		for(var i in foodList){
@@ -194,7 +194,7 @@ function canvas_game(canvas_id){
 			if(collision){
 				collision_width_food = true;
 				delete foodList[i];
-				console.warn('collision_width_food', collision_width_food);	
+				//console.warn('collision_width_food', collision_width_food);	
 			} 
 		}
 		for(var i in bulletList){
@@ -210,14 +210,13 @@ function canvas_game(canvas_id){
 		}
 		
 		if(count_frame % 4 == 0){
-			console.warn('count_frame', count_frame);	
 			if(collision_width_enemy){						
-				console.warn('collision_width_enemy', count_frame, collision_width_enemy);	
+				//console.warn('collision_width_enemy', count_frame, collision_width_enemy);	
 				collision_width_enemy = false;
 				player.health--;
 			}
 			if(collision_width_food){						
-				console.warn('collision_width_food', count_frame, collision_width_food);	
+				//console.warn('collision_width_food', count_frame, collision_width_food);	
 				collision_width_food = false;
 				player.health++;
 				score = score + 10;
@@ -231,7 +230,7 @@ function canvas_game(canvas_id){
 		
 		if(player.health <= 0){						
 			var time_survived = (Date.now() - start_game)/1000;
-			console.warn("LOST ", time_survived);
+			//console.warn("LOST ", time_survived);
 			self.resetGame();
 		}
 				
