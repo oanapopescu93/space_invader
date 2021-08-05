@@ -12,3 +12,16 @@ canvas{
     border:solid 1px white;
     margin-top:20px;
 }
+
+/*---------------------footer---------------------*/
+footer { 	
+    padding: 10px 0px;
+    color: white;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	right:0px;
+}
+footer ~ div {
+  visibility: hidden;
+}
