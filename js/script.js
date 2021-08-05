@@ -6,6 +6,10 @@ var ctx;
 $(document).ready(function() {
 	game = new canvas_game("myCanvas");
 	game.ready();
+	
+	var date = new Date();
+	date = date.getFullYear();
+	$('#copyright_year').text(date);
 });
 
 function canvas_game(canvas_id){
