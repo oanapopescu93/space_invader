@@ -1,2 +1,2 @@
-# space_invader
-Space invader with javascript
+# Space Invader
+A HTML Canvas and Javascript game to cure office boredom
